@@ -37,8 +37,6 @@ The directory structure contains:
 + `/classes`            :  any reusable UI classes
 + `/controllers`        :  contains the UI controllers 
 + `/controllers/[ToolName].js` : the master controller for this Tool. 
-+ `mockup_setup.js`     :  used for prototyping
-+ `mockup.html`         :  UI prototyping
 + `/models`             :  contains the UI Model objects
 + `[ToolName].css`      :  any tool specific UI .css definitions for this tool
 + `[ToolName].js`       :  the initial entry point for the tool (defines dependencies)
