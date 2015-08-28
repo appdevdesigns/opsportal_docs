@@ -61,8 +61,8 @@ You designer updates `[project]/assets/mockup.html` and pushes their changes bac
 
                 <div class="op-stage-body">
 
-                	<!-- List Widget -->
-                    <div class="col-xs-2 op-container">
+                	  <!-- List Widget -->
+                    <div class="col-xs-2 op-container op-widget ">
                        <!-- contents removed for brevity -->
                     </div>
 

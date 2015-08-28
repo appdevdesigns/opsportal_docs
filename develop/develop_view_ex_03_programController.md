@@ -5,13 +5,13 @@ Your default program controller will be attached for you when your OpsTool loads
 
 What gets displayed for your default controller is the view at: `[project]/assets/opstools/[ToolName]/views/[ToolName]/[ToolName].ejs`
 
-This is an Embedded Javascript (.ejs) template.  You should read about [CanJS's implementation](http://canjs.com/docs/can.ejs.html).
+This is an [Embedded Javascript (.ejs) template](http://canjs.com/docs/can.ejs.html).  
 
 
 Our job now is to take the HTML provided in the `mockup.html` and move it to your `[ToolName].ejs` file.  
 
 1. Open `mockup.html`
-2. copy everything between the `<!-- HTML Mockup Here --> <!-- End HTML Mockup -->` tags.
+2. copy everything between the `<!-- HTML Mockup Here -->` and  `<!-- End HTML Mockup -->` tags.
 3. Open `[ToolName].ejs`
 4. Replace everything with what you copied.
 

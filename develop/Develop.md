@@ -10,6 +10,8 @@ Here is how you can start developing an OpsPortal Tool today:
 
 + [Testing and continuous integration](develop_testing.md)
 
++ [Contributing to a project](develop_contribute.md)
+
 
 Also, be sure to review our [style guide](../style_guide/StyleGuide.md)
 

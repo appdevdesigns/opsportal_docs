@@ -4,7 +4,8 @@
 When ever you create an OpsTool, there is a default Controller created that is named after your tool. 
 > `[project]/assets/opstools/[ToolName]/controllers/[ToolName].js`
 
-This is the Main controller for the Tool, and it's job is to attach and coordinate any of the Tool's sub controllers.
+This is the main controller for the Tool, and it's job is to attach and coordinate any of the Tool's sub controllers.
+
 
 After looking at the mockup file, we decide there are two additional controllers we need to make:  List and Detail
 ![Controllers](images/develop_view_controllers.png "Overview")

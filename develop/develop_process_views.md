@@ -7,8 +7,13 @@ We've moved away from splitting our Views into seperate files (at least during d
 
 You can read why [here](develop_process_views_why.md).
 
+### The Goal of our approach
 
-### So here is an example of how we would do work with Views:
+1. have a common reference document between our UI Designer and our UI Programmers: `mockup.html`
+2. reduce the effort in incorporating changes in the UI design into our MVC architecture.
+
+
+### So here is an example of how we would do work with Controllers & Views:
 For this example, lets suppose we are building a simple application with a list on the left, and a detail section on the right:
 ![View Example](images/develop_view_example.png "Overview")
 
@@ -17,6 +22,9 @@ For this example, lets suppose we are building a simple application with a list 
 3. [Attach your Program Controller](develop_view_ex_03_programController.md)
 4. [Understand the Program Controller](develop_view_ex_04_understandProgramController.md)
 5. [Add the List Controller](develop_view_ex_05_listController.md)
+6. [Some Final Reminders](develop_view_ex_06_finalReminders.md)
+
+
 
 [< Develop](Develop.md)     
-Next: [Create a Plugin >](develop_plugin_create.md)
+Next: [Have your UI developer design a mockup >](develop_view_ex_01_mockup.md)

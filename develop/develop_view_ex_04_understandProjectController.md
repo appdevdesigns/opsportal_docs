@@ -42,7 +42,7 @@ function(){
 
 
 ###### Dependencies
-The first part of the file specifies the dependencies required before this code can be run.  In this case we are using JavascriptMVC's [steal](http://static.javascriptmvc.com/docs/stealjs.html) library to specify our dependencies.
+The first part of the file specifies the dependencies required before this code can be run.  In this case we are using [JavascriptMVC's steal](http://static.javascriptmvc.com/docs/stealjs.html) library to specify our dependencies.
 
 ```javascript
 steal(
@@ -72,8 +72,8 @@ AD.Control.OpsTool.extend( [ControllerName], { Controller Definition } );
 
 in our `{ Controller Definition }` we defined two methods:
  
-+ init(): called by CanJS objects when they are created
-+ initDom(): called at the end of init() to setup our initial view.
++ `init()`: called by CanJS objects when they are created
++ `initDom()`: called at the end of init() to setup our initial view.
 
 our `initDom()` actually pushes our HTML view to the DOM:
 
