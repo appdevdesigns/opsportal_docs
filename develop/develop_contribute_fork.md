@@ -1,7 +1,12 @@
 [< Develop](Develop.md)
 # Contributing: Create your own Fork of the project
 
-Create your own fork of a project.
+
+### Prerequisits
+Any of the OpsTool projects you work on will need to first have a [SailsJS environment and the OpsPortal installed](develop_setup.md) on your local development machine.  Be sure to do that before you continue on.
+
+
+### Create your own fork of a project.
 
 1. Log into GitHub under your account:
 2. Visit the GitHub repository you want to work on
@@ -13,17 +18,20 @@ Create your own fork of a project.
 ![Your Copy](images/develop_contribute_fork_03.png "Your Copy")
 6. Get the URL to your copy
 ![Your URL](images/develop_contribute_fork_04.png "Your URL")
+7. now Git clone into your OpsPortal directory:
+```sh
+# from your Sails directory
+$ cd node_modules
+$ git clone https://your/git/url/[project].git 
+$ cd [project]
+$ git checkout -b develop
+$ git pull origin develop
 
+```
 
-
-////// LEFT OFF HERE  
-
-
-+ [Create Your Own Fork] ( develop_contribute_fork.md ) of the project
-+ [Submit Pull requests](develop_contribute_fork.md ) to our #develop branch
-
+### Now your ready to get to work!
 
   
 
 [< Develop](Develop.md)     
-Next: [Create Your Own Fork >] ( develop_contribute_fork.md ) of the project
+Next: [Keep your Fork up to date >] (develop_contribute_sync.md) 

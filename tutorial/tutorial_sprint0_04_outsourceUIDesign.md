@@ -8,7 +8,7 @@ Currently this plugin has a set of mockup files :
 + `/assets/mockup.html` : Contains the HTML mockup of the project
 + `/assets/mockup_setup.js` :  Contains any javascript code the UI designer needs to animate his mockup
 
-At this point in the Sprint, I now send my UI developer the project design document, and tell him to prepare [their own copy](../develop/develop_contribute_fork.md) of the project:
+At this point in the Sprint, I now send my UI developer the project design document, and tell him to prepare [their own copy](../develop/develop_contribute.md) of the project:
 
 + [setup a development environment](../develop/develop_setup.md)
 + git clone [THEIR Fork](../develop/develop_contribute_fork.md) of the project

@@ -33,6 +33,7 @@ Alternatively, if you are the kind of person who likes seeing how everything is 
 #### Test it out
 Now test this out:
 ```sh
+$ cd sails
 $ sails lift
 ```
 
