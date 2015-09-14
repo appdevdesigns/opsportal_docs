@@ -10,6 +10,7 @@ We have a tool that steps through the process of:
 It's a single command that gets the OpsPortal developers right where they want to go.
 
 ```sh
+# from your [sailsRoot]
 $ cd node_modules/
 $ appdev opstoolplugin [pluginName]
    # [pluginName] is whatever you want to name your new plugin

@@ -5,7 +5,7 @@ A single plugin can contain one or more client side OpsPortal tools.  These are 
 
 To do this, run the following command from your new plugin directory:
 ```sh
-$ cd node_modules/
+# from plugin directory
 $ appdev opstool [toolName]
    # [toolName] is whatever you want to name your new tool interface
 ```

@@ -29,5 +29,8 @@ OK, at this point our project has an initial code base that is shared on GitHub 
 
 Now we are ready to get some developers setup.
 
+
+
+---
 [< sprint 0](tutorial_sprint0.md)
 [step 4 : Outsource our UI design >](tutorial_sprint0_04_outsourceUIDesign.md) 

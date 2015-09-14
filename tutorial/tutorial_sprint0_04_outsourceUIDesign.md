@@ -24,8 +24,7 @@ At this point in the Sprint, I now send my UI developer the project design docum
 + and pull down a clone of the appdev-mockups project to make sure these html templates work.
    ```sh 
    $ cd assets
-   $ git clone https://github.com/appdevdesigns/appdev-mockups.git mockups
-      # pay attention to the "mockups" folder name
+   $ git clone https://github.com/appdevdesigns/appdev-mockups.git 
    ```
 
 + Now open the `assets/mockup.html` in a browser and verify there are no errors.
@@ -35,6 +34,6 @@ At this point in the Sprint, I now send my UI developer the project design docum
 
 
 
-
+---
 [< sprint 0](tutorial_sprint0.md)
-[step 5 : Some Initial UI Tests >](tutorial_sprint0_04_initialUITests.md) 
+[step 5 : Some Initial UI Tests >](tutorial_sprint0_05_designFixtures.md) 

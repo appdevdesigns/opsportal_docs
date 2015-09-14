@@ -29,7 +29,7 @@ $ git pull origin develop
 
 ```
 
-### Now your ready to get to work!
+### Now you're ready to get to work!
 
   
 

@@ -1,3 +1,4 @@
+[< Tutorial](tutorial.md)
 # Tutorial - Sprint 0
 
 
@@ -15,3 +16,9 @@ I'm expecting that you have already walked through our [Developer Setup](../deve
 + [step 2](tutorial_sprint0_02_createProject.md) : Create the Github Project
 + [step 3](tutorial_sprint0_03_setupTravisCI.md) : Setup Travis CI 
 + [step 4](tutorial_sprint0_04_outsourceUIDesign.md) : Outsource our UI design
++ [step 5](tutorial_sprint0_05_designFixtures.md) : Setup our Testing Fixtures
+
+
+---
+[< Tutorial](tutorial.md)
+[Sprint 1 : Server Side >](tutorial_sprint1.md) 

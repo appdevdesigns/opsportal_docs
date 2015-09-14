@@ -43,5 +43,8 @@ And now I see the new `ProcessApproval` Area defined in the OpsPortal Menu:
 And a tool with some default HTML that is displayed:
 ![Approval Tool](images/tutorial-sprint0-toolPlaceholder.png "Overview")
 
+
+
+---
 [< sprint 0](tutorial_sprint0.md)
 [step 2 : Create the Github Project >](tutorial_sprint0_02_createProject.md) 

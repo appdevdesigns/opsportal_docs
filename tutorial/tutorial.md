@@ -16,3 +16,4 @@ Take a few minutes to look over the original design document [here](ops-approval
 
 + [sprint 0](tutorial_sprint0.md) : Getting the project setup
 + [sprint 1](tutorial_sprint1.md) : Server side ...
++ [sprint 2](tutorial_sprint2.md) : Animating the Client Side

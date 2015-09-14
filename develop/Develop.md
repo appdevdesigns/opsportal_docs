@@ -8,6 +8,11 @@ Here is how you can start developing an OpsPortal Tool today:
 + [configure a new OpsTool in the OpsPortal](develop_opsportal_config.md)
 + [(shortcut) create an opstool plugin](develop_plugin_opstool.md)
 
++ [working with models](develop_models.md)
+
++ [TODO: Multilingual]
++ [TODO: Client Side Issues (forms & Validations), (associations), ]
+
 + [Testing and continuous integration](develop_testing.md)
 
 + [Contributing to a project](develop_contribute.md)

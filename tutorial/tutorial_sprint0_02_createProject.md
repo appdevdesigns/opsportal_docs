@@ -30,5 +30,7 @@ Now at this point this project is now hosted on github for our developers to acc
 You can read here about how we implement our [git branching strategy.](http://nvie.com/posts/a-successful-git-branching-model/)
 
 
+
+---
 [< sprint 0](tutorial_sprint0.md)
 [step 3 : Setup Travis CI >](tutorial_sprint0_03_setupTravisCI.md) 
