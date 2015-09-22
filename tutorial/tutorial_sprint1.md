@@ -24,9 +24,17 @@ Last sprint we sent our UI design to our UI developer.  However as of right now,
 ### Let's Go
 
 + [step 1](tutorial_sprint1_01_models.md) : Create the Models on the server
++ [step 2](tutorial_sprint1_02_fixtures.md) : Correct our Fixture data
++ [step 3](tutorial_sprint1_03_fixtureResponse.md) : Return our expected Fixture data on PARequest.find()
++ [step 4](tutorial_sprint1_04_serverBranch.md) : Create our Server Side Feature branch
++ [step 5]() : lockdown unused interfaces
++ [step 6]() : limit access to the find() operation to users with the proper permission
++ [step 7]() : condition the find() operation to limit according to the user's scope
++ [step 8]() : create the server side Message Queue
 
 ///// left off here::
-//// put in a fixture + service 
+////  + make sure appdev install ...  auto set's up admin:admin user account by default (in local Auth)
+////
 
 ---
 [< Tutorial](tutorial.md)

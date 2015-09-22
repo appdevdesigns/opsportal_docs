@@ -30,6 +30,17 @@ $ appdev resource opstools/EmailNotification ENRecipient title:string recipients
 ```
 >Note: here we namespace the model with "EN" and keep the Model singular:  ENRecipient
 
+This command creates:
+```sh
+# from the [pluginRoot]
+api/models/ENRecipient.js                             // the SailsJS Model definition 
+api/controllers/ENRecipientController.js              // when SailsJS has a controller the same name as a Model, it creates a RESTful web interface for it
+assets/[application]/models/ENRecipient.js            // the CanJS client side Model definition
+assets/[application]/models/base/ENRecipient.js       // the CanJS client side Model definition with the connection info set
+       # [application]  = opstools/EmailNotification
+```
+
+
 
 By default, Sails will create a table with the same name as the model (`enrecipient`).  But you can specify the table name by:
 ```sh
@@ -65,7 +76,7 @@ Once you have done that, you can start Sails:
 $ sails lift
 ```
 
-After sails starts, you can now check your DB and see your new table created. If you explore the MySQL definition of the table, you will see it looks like:
+After sails starts, you can now check your DB and see that your new table created. If you explore the MySQL definition of the table, you will see it looks like:
 ```sql
 CREATE TABLE `en_recipient` (
   `title` varchar(255) DEFAULT NULL,

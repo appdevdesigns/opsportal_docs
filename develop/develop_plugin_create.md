@@ -75,6 +75,7 @@ We are going to add a new "Area" to the OpsPortal, and install this new Tool und
 At this point, we have an NPM module in your sails' /node_modules directory.  But sails doesn't know about the resources provided by your plugin.  So we have a setup routine that will make sure your plugin's resources are available to the enclosing sails application:
 
 ```sh
+# from your [plugin] directory
 $ node setup/setup.js
 ```
 

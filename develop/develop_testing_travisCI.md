@@ -16,15 +16,16 @@ language: node_js
 node_js:
 - "stable"
 
+sudo: false
+
 before_script:
 - npm install -g  balderdashy/sails appdevdesigns/appdev-cli#develop
 - cd /tmp
-- chmod +x /home/travis/build/appdevdesigns/[projectName]/test/setup/install.sh
-- /home/travis/build/appdevdesigns/[projectName]/test/setup/install.sh
+- chmod +x /home/travis/build/[yourAccount]/[project]/test/setup/install.sh
+- /home/travis/build/[yourAccount]/[project]/test/setup/install.sh
 - cd ad-test/node_modules
-- mv /home/travis/build/appdevdesigns/[projectName] .
-- cd [projectName]
-- npm install mocha chai
+- mv /home/travis/build/[yourAccount]/[project] .
+- cd [project]
 - npm install
 
 script:
@@ -40,6 +41,11 @@ node_js:
 - "stable"
 ```
 
+###### and we can use travisCI's new container system:
+```
+sudo: false
+```
+
 
 ###### before we run our script, we need to install  SailsJS and our Appdev tools:
 
@@ -52,8 +58,8 @@ before_script:
 ###### Then we need to setup a default Sails + Appdev install:
 ```
 - cd /tmp
-- chmod +x /home/travis/build/appdevdesigns/opstool-process-approval/test/setup/install.sh
-- /home/travis/build/appdevdesigns/opstool-process-approval/test/setup/install.sh
+- chmod +x /home/travis/build/[yourAccount]/[project]/test/setup/install.sh
+- /home/travis/build/[yourAccount]/[project]/test/setup/install.sh
 ```
 > NOTE: the `install.sh` script runs any additional steps for the setup.
 > By default it simply runs: `appdev install ad-test --develop --travisCI`
@@ -62,14 +68,13 @@ before_script:
 ###### Now we move our project under the newly installed `ad-test` directory:
 ```
 - cd ad-test/node_modules
-- mv /home/travis/build/appdevdesigns/[projectName] .
+- mv /home/travis/build/[yourAccount]/[projectName] .
 ```
 
 
 ###### And now enter our project directory and make sure all the `npm` dependencies are installed:
 ```
 - cd [projectName]
-- npm install mocha chai
 - npm install
 ```
 

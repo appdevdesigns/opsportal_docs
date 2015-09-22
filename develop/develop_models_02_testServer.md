@@ -3,7 +3,7 @@
 
 SailsJS includes a [console](http://sailsjs.org/documentation/reference/command-line-interface/sails-console) feature for helping you test and debug your Server side models.
 
-We are going to use this console to test out the example Model we created in [step 1a](develop_models_01_a_sailsManaged.md):  ENRecipient
+We are going to use this console to test out the example Model we created in [step 1a](develop_models_01_a_sailsManaged.md):  `ENRecipient`
 
 ```sh
 # in your [sailsRoot]
@@ -17,7 +17,7 @@ Let's try to create some new data for your `ENRecipient` model:
 sails> ENRecipient.create([{ title:"X-Men", recipients:"profX@email.com, cyclopse@email.com" }, 
 { title:"Avengers", recipients:"capt@email.com, hulk@email.com"}]).then(console.log)
 ```
-> NOTE: type that all in on one line
+> NOTE: type that all on one line
 
 When it executes, you should see a response like:
 ```sh

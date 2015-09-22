@@ -16,13 +16,12 @@ This test command will run our `Makefile` in our project's root directory.  The 
 REPORTER = dot
 
 test:
-	@NODE_ENV=test ./node_modules/.bin/mocha \
+	@NODE_ENV=test PORT=9999 ./node_modules/.bin/mocha \
     --reporter $(REPORTER) \
     test/bootstrap.test.js \
-    test/unit/*.js
+    test/**/*.js
 
 .PHONY: test
-
 ```
 
 So every time you add another testfile.js in your `[project]/test/` directory, that test file will automatically be run along with all the rest.

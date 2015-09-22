@@ -1,5 +1,5 @@
 [< Models : Create the Server Side Model](develop_models_01_create.md) 
-# Models : Create the Server Side Model : Working with an Existing Table
+# Models : Working with an Existing Table
 
 Sometimes you are having to connect to an existing system where the MySQL DB is already created for you.  In this case, we will generate a Sails model and make sure Sails doesn't add any of it's default fields.
 
@@ -92,4 +92,4 @@ $ node setup/setup.js
 
 
 [< Models : Create the Server Side Model](develop_models_01_create.md)     
-Next: [... >](develop_models_01_b_existing.md)
+Next: [test the server side model >](develop_models_02_testServer.md)
