@@ -23,9 +23,12 @@ Readable and portable style guide providing standards for maintaining a consista
  * [Avatars] (#avatars)
  * [Modal Windows] (#modal-windows)
  * [Tooltips] (#tooltips)
+ * [Dropzone] (#dropzone)
 * [HTML Blocks] (#html-blocks)
  * [Lists] (#lists)
  * [Tables] (#tables)
+ * [Margins] (#margins)
+ * [Buttons] (#buttons)
 
 ##About <a id="about"></a>
 ###About AppDevDesigns <a id="about-appdevdesigns"></a>
@@ -46,6 +49,8 @@ The Bootstrap Framework provides the CSS foundation on which tools are built. Th
  
 ###Global Defaults <a id="global-defaults"></a>
 Default CSS applied to all tools should be placed in section 1 in "opsportal.css", located in "/node_modules/appdev-opsportal/assets/OpsPortal/".
+
+When there are no custom defaults defined in "opsportal.css", Bootstrap style definitions are used as the default.
 
 ---
 
@@ -84,7 +89,7 @@ The html for the global framework is found in "/node_modules/appdev-opsportal/as
 ###Masthead <a id="masthead"></a>
 The masthead is the global bar at the top of every tool, as seen in the screenshot below. The html for the masthead is found in "/node_modules/appdev-opsportal/assets/OpsPortal/views/OpsPortal/OpsPortal.ejs".
 
-<img src="images/masthead.png" width="600" alt="Image: Masthead" title="Masthead" />
+<img src="images/masthead.png" width="800" alt="Image: Masthead" title="Masthead" />
 
 The default html for the masthead is below, with inline comments.
 
@@ -108,7 +113,7 @@ The default html for the masthead is below, with inline comments.
 
 ---
 
-###Global Menu <a id="global-menu">
+###Global Menu <a id="global-menu"></a>
 The global menu is hidden by default, and contains a list of globally available tools (limited by user permissions). See screenshot below:
 
 <img src="images/global-menu.png" width="150" alt="Image: Global Menu" title="Global Menu" />
@@ -289,6 +294,20 @@ Tooltips are added to elements (links, div, etc) by adding `class="tt"` and `tit
 
 	<a href="#" class="tt" title="Tooltip content" data-placement="left">Link</a>
 
+---
+
+###Dropzone <a id="dropzone"></a>
+Dropzone provides drag 'n drop file uploads and utilizes the dropzone.js script. Dropzone uses the following html form:
+
+	<form action="#" class="dropzone op-dropzone" id="">
+		<div class="dz-message">Drop files here or click to upload.
+			<span class="dz-note">Want to provide extra notes or instructions? Do it here.</span>
+		</div>
+	</form>
+
+Dropzones use the the "op-dropzone" class, found in the global opsportal.css file, to style the dropzone. The "op-dropzone" class can be overridden for customized, context-specific styles. See screenshot below for an example of the default dropzone implementation.
+
+<img src="images/dropzone.png" width="400" alt="Image: Dropzone" title="Dropzone" />
 
 ---
 
@@ -348,12 +367,62 @@ Note:
 Some default margin classes are provided as follows. See _opsportal.css_.
 
 	.op-nopadding { padding: 0 !important; }
-	.op-margin-top { margin-top: 15px; }
-	.op-margin-top-2x { margin-top: 30px; }
-	.op-margin-bottom { margin-bottom: 15px; }
-	.op-margin-bottom-2x { margin-bottom: 30px; }
-	.op-padding-top { padding-top: 15px; }
-	.op-padding-top-2x { padding-top: 30px; }
-	.op-padding-bottom { padding-bottom: 15px; }
+	.op-margin-top { margin-top: 15px !important; }
+	.op-margin-top-2x { margin-top: 30px !important; }
+	.op-margin-bottom { margin-bottom: 15px !important; }
+	.op-margin-bottom-2x { margin-bottom: 30px !important; }
+	.op-padding-top { padding-top: 15px !important; }
+	.op-padding-top-2x { padding-top: 30px !important; }
+	.op-padding-bottom { padding-bottom: 15px !important; }
 	.op-divider-top { border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 15px; }
 	.op-divider-bottom { border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 15px; }
+	
+
+###Buttons <a id="buttons"></a>
+Default OpsPortal buttons are implemented on `<a>` and `<button>` tags using the following html:
+
+	<a href="" class="btn op-btn op-btn-dk" role="button">Button Label</a>
+	
+Note that the "btn" class is found in the default Bootstrap stylesheet, but can be overriden in opsportal.css and opsportal-theme.css. OpsPortal button override styles are found in the following stylesheets:
+
+#####opsportal-theme.css
+
+	.op-btn {
+	    margin: 0 5px;
+	    opacity: 0.75;
+	    transition: opacity 0.3s ease-out 0s;
+	}
+
+	.btn, .btn:hover, .btn:focus, a.btn, a.btn:hover, a.btn:visited {
+	    border-color: transparent !important;
+	    color: #fff;
+	}
+	
+	.op-btn-dk {
+	    background-color: #444444;
+	    color: #fff;
+	}
+	
+#####opsportal.css
+
+	.btn {
+	    white-space: normal !important;
+	}
+	
+See screenshot below for an example of the default button implementation.
+
+#####Button in normal state
+<img src="images/button-off.png" width="150" alt="Image: Button Off" title="Button Off" />
+
+#####Button in hover state
+<img src="images/button-on.png" width="150" alt="Image: Button On" title="Button On" />
+
+####Form Buttons
+Buttons used on forms are are laid out left to right, with the "Submit" or "Save" buttons on the right side of the list of buttons. "Submit" or "Save" buttons are blue by default, but can be overriden in opsportal-theme.css. Buttons on forms are implemented using the following html:
+
+	<button type="button" class="btn op-btn op-btn-dk">Cancel</button>
+	<button type="button" class="btn btn-primary pull-right op-btn">Save</button>
+	
+See screenshot below for an example of the default form buttons implementation.
+
+<img src="images/button-form.png" width="200" alt="Image: Form Button" title="Form Button" />
