@@ -3,11 +3,13 @@
 
 In order to develop for the OpsPortal, you need to install the following packages:
 
+  - [Git](https://git-scm.com/downloads)
+  - [Mysql](https://www.mamp.info/en/downloads/) (optional: only if you want to use mysql)
   - [NodeJS](http://nodejs.org/download/)
   - [SailsJS](http://sailsjs.org/#/)
   - [appdev-cli](https://github.com/appdevdesigns/appdev-cli) (recommended)
 
-First, make sure you download the appropriate [NodeJS](http://nodejs.org/download/) package and install it.  When that is done, you will also have a command line tool called `npm`
+First, make sure you download and install [Git](https://git-scm.com/downloads) and [Mysql](https://www.mamp.info/en/downloads/).  Then download the appropriate [NodeJS](http://nodejs.org/download/) package and install it.  Once that is done, you will also have a command line tool called `npm`
 
 The rest of the setup can be done from the command line:
 ```sh

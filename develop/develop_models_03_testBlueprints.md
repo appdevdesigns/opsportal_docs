@@ -3,7 +3,7 @@
 
 In SailsJS, if you define a Model and a Controller with the same Model name, then Sails will automatically setup a RESTful interface for your model using [blueprints](http://sailsjs.org/documentation/reference/blueprint-api).
 
-Our appdev tools:  `appdev resource ...`  and `appdev table2model ...`  create both a server side model instance, and a corresponding controller for that model.  When sails loads your new model should have a RESTful interface running.
+Our appdev tools:  `appdev resource ...`  and `appdev table2model ...`  create both a server side model instance, and a corresponding controller for that model.  When sails loads, your new model should have a RESTful interface running.
 
 For this example lets assume that
 

@@ -7,7 +7,7 @@ Creating our SailsJS Models for the project.
 
 
 ### Prerequsite
-I'm expecting you to be familiar with our [developer Model notes](../developer/develop_models.md).
+I'm expecting you to be familiar with our [developer Model notes](../develop/develop_models.md).
 
 
 ### Let's Go
@@ -23,7 +23,7 @@ Some decisions:
 
 
 ##### Be a good TDD developer and write your tests first
-At this point, I don't have any idea about any unique capabilities I'm expecting from either of my Models, so my tests wont be very specific.  I'll at least create a test case for each of my Models and check for their existance:
+At this point, I don't have any idea about any unique capabilities I'm expecting from either of my Models, so my tests wont be very specific.  I'll create a test case for each of my Models and simply check for their existance:
 
 
 ```javascript

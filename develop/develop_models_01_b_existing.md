@@ -68,7 +68,7 @@ module.exports = {
 
 ```
 
-Since we are asking Sails to access an table we are managing outside of Sails, then we specify we don't want sails to auto create it's default fields: `id`, `createdAt`, `updatedAt`:
+Since we are asking Sails to access a table we are managing outside of Sails, we specify we don't want sails to auto create it's default fields: `id`, `createdAt`, `updatedAt`:
 ```javascript
   autoCreatedAt:false,
   autoUpdatedAt:false,

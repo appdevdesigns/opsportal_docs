@@ -145,4 +145,4 @@ You can use this file to override any of the `appdev` generated defaults or add 
 
 
 [< test their REST interface](develop_models_03_testBlueprints.md)    
-Next: [update the Client side Model >](develop_models_04_clientModels.md)
+Next: [Models >](develop_models.md)
