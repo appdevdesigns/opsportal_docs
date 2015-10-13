@@ -38,4 +38,4 @@ Last sprint we sent our UI design to our UI developer.  However as of right now,
 
 ---
 [< Tutorial](tutorial.md)
-[Sprint 1 : Server Side >](tutorial_sprint1_01_models.md) 
+[Sprint 1 : Create the Models on the server >](tutorial_sprint1_01_models.md) 
