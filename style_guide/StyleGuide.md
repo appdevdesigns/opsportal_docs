@@ -64,8 +64,9 @@ Default colors applied to all tools should be placed in "opsportal-theme.css", l
 Appdevdesign tools are visually broken out into three primary sections (see screenshot below):
 
 1. Masthead - contains the "Menu" link and contextual navigation
-2. Stage - further broken into two sections: _tool widgets_ and _main content_ area
-3. Sidebar Menu - hidden by default, contains list of globally available tools
+2. Sidebar Menu - hidden by default, contains list of globally available tools
+3. Tool Widgets - contextual tools layered horizontally (when more than 1 tool) from left edge of window. The tool widget uses the full height of the window with internal scrolling
+4. Stage - main content area
 
 <img src="images/global-framework.png" width="600" alt="Image: Global Framework" title="Global framework" />
 
@@ -77,12 +78,26 @@ The html for the global framework is found in "/node_modules/appdev-opsportal/as
 		<div class="op-container op-masthead">
 			<!-- masthead-specific code removed for brevity sake -->
         	
-		<!-- Global menu (Widget hidden by default) -->
+		<!-- Sidebar Menu (Widget hidden by default) -->
 		<div class="op-menu-widget"></div>
+		
+		<div class="row op-container"> <!-- container for _tool widgets_ and _stage_ -->
+		
+			<!-- Tool Widget -->
+			<div class="col-xs-2 op-container op-widget" id="">
+				<div class="op-widget-masthead"></div>
+				<div class="op-widget-body">
+					<!-- Widget body content goes here -->
+				</div>		
+				<div class="op-widget-footer">
+					<!-- Widget footer content goes here -->
+				</div>
+			</div>
 	
-		<!-- Stage -->
-		<div class="op-container op-stage"></div>
-    
+			<!-- Stage -->
+			<div class="col-xs-10 op-container op-stage"></div>
+
+    	</div>
 	</div>
 
 
