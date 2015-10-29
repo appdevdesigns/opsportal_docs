@@ -174,21 +174,30 @@ module.exports = {
 
     find: function(req, res) {
 
+        if (fixtureData == null){
 
-      if (fixtureData == null){
-        var data = fs.readFileSync(path.join(__dirname, '..', '..', 'test', 'fixtures', 'PARequest.json'));
-        fixtureData = JSON.parse(data);
+            var pathToFixture = path.join(__dirname,'..', '..', 'test', 'fixtures', 'PARequest.json');
+            fs.readFile(pathToFixture, { encoding:'utf8'}, function(err, data) {
 
-        fixtureData.splice(fixtureData.length-1, 1);  // <-- this one isn't supposed to be returned.
+                if (err) {
+                    res.error(err);
+                } else {
 
-      }
-      res.send(fixtureData);
+                    fixtureData = JSON.parse(data);
+                    fixtureData.splice(fixtureData.length-1, 1);  // <-- this one isn't supposed to be returned.
+                    res.send(fixtureData);
+                }
+            });
+
+        } else {
+
+          res.send(fixtureData);
+        }
 
     }
 
 };
 ```
->NOTE: yes, I did use a synchronous file access operation in the controller, and yes it is very *un-Node* like.  But hey, it is only run once and this code is temporarly here for the sake of providing a reference point for our client and server side developers.  *So ... take a deep breath and move on.*
 
 
 ##### Verify our tests pass
