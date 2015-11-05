@@ -129,18 +129,137 @@ You should see a **forbidden** message in your browser.
 same for:  `localhost:1337/opstool-process-approval/parequest/destroy`
 
 
+
+
+### Write some Unit Tests to verify these routes are no longer accessable:
+> shoot!  I updated my code without writing the tests first.  Looks like I got ahead of myself, and it certainly wont be the last time.  So let's just write our Tests now and get back to work.
+
+Let's update our `tests/controller/PARequestController.js` to now make sure we can not get to the `create` or `delete` routes:
+
+```javascript
+it('should not be able to access our REST create route: ', function(done) {
+
+    request
+        .post('/opstool-process-approval/parequest')
+        .set('Accept', 'application/json')
+        .expect(403)                        // should return a forbidden
+        .end(function(err, res){
+
+            assert.isNull(err, ' --> there should be no error.');
+            done(err);
+        });
+
+});
+
+
+it('should not be able to access our REST delete route: ', function(done) {
+
+    request
+        .delete('/opstool-process-approval/parequest')
+        .set('Accept', 'application/json')
+        .expect(403)                        // should return a forbidden 
+        .end(function(err, res){
+
+            assert.isNull(err, ' --> there should be no error.');
+            done(err);
+        });
+
+});
+```
+> NOTE: `delete` is a reserved keyword in javascript, so it would be better if you wrote the request as: `request['delete']('/opstool-process-approval/parequest')`
+
+
+Now run your tests:
+```sh
+$ npm test
+
+> opstool-process-approval@0.0.0 test /sails/node_modules/opstool-process-approval
+> make test
+
+  ․․․․․․․․
+
+  8 passing (12s)
+
+```
+> Note: our sails server actually spits out a few logging messages that I removed in this example.  Don't worry if your actual output looks slightly different. 
+
+
+
+That looks good.  Now write a test that expects a failure when attempting to access a shortcut route:
+```javascript
+
+it('should not be able to access our shortcut route for find: ', function(done) {
+
+    request
+        .get('/opstool-process-approval/parequest/find')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)     // should return json
+        .expect(404)                        // should return a not found 
+        .end(function(err, res){
+            assert.isNull(err, ' --> there should be no error.');
+            done(err);
+        });
+
+});
+
+```
+
+and now run your test:
+```sh
+$ npm test
+
+> opstool-process-approval@0.0.0 test /sails/node_modules/opstool-process-approval
+> make test
+
+
+  ․․․․․․․․․
+
+  8 passing (12s)
+  1 failing
+
+  1) PARequestController should not be able to access our shortcut route for find: :
+     Uncaught AssertionError:  --> there should be no error.: expected [Error: expected 404 "Not Found", got 200 "OK"] to equal null
+      at Function.assert.isNull (node_modules/chai/lib/chai/interface/assert.js:388:32)
+      at Test.<anonymous> (test/controllers/PARequestController.js:66:24)
+      at Test.assert (node_modules/ad-utils/node_modules/supertest/lib/test.js:156:6)
+      at Server.assert (node_modules/ad-utils/node_modules/supertest/lib/test.js:127:12)
+      at net.js:1419:10
+
+
+
+make: *** [test] Error 1
+npm ERR! Test failed.  See above for more details.
+```
+
+That looks right.  We expected an error, but we got a 200 instead.  
+
 Now go back and disable the shortcuts:
 ```javascript
 // your api/controllers/PARequestController.js
 module.exports = {
 
     _config: {
-        model: "parequest", // all lowercase model name
+        model: "parequest", 
         actions: false,
         shortcuts: false,    // <------ disable this
         rest: true
     },
 ```
+
+and now run our tests again:
+```sh
+$ npm test
+
+> opstool-process-approval@0.0.0 test /sails/node_modules/opstool-process-approval
+> make test
+
+
+  ․․․․․․․․․
+
+  9 passing (13s)
+
+```
+
 
 
 OK, save these changes in your new feature branch:

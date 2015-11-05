@@ -59,6 +59,8 @@ And we need to make sure we have a fixture defined for a test user in place:
 ]
 ```
 
+> NOTE: our `appdev opstool` command will include some additional fixtures for you automatically:  SiteUser.json is one of them.  So this could already be installed for you.
+
 Now let's add our actual test to our unit test:
 ```javascript
 // test/controllers/PARequestController.js
