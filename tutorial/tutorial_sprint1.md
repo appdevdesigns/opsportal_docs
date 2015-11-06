@@ -29,12 +29,9 @@ Last sprint we sent our UI design to our UI developer.  However as of right now,
 + [step 4](tutorial_sprint1_04_serverBranch.md) : Create our Server Side Feature branch
 + [step 5](tutorial_sprint1_05_lockdownAPI.md) : Lockdown unused interfaces
 + [step 6](tutorial_sprint1_06_restrictAccess.md) : limit access to the find() operation to users with the proper permission
-+ [step 7]() : condition the find() operation to limit according to the user's scope
-+ [step 8]() : create the server side Message Queue
++ [step 7](tutorial_sprint1_07_restrictScope.md) : condition the find() operation to limit according to the user's scope
++ [step 8](tutorial_sprint1_08_messageQueue.md) : create the server side Message Queue
 
-///// left off here::
-////  + make sure appdev install ...  auto set's up admin:admin user account by default (in local Auth)
-////
 
 ---
 [< Tutorial](tutorial.md)

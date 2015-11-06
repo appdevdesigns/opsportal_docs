@@ -351,4 +351,4 @@ You should now see the data that we entered in our `test/fixtures/PARequest.json
 
 ---
 [< step 5 : Lockdown unused interfaces](tutorial_sprint1_05_lockdownAPI.md) 
-[step 7 : .... >](tutorial_sprint1_07_????.md) 
+[step 7 : restrict find() to user's scope >](tutorial_sprint1_07_restrictScope.md) 
