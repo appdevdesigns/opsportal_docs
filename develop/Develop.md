@@ -14,6 +14,8 @@ Here is how you can start developing an OpsPortal Tool today:
 + [TODO: Client Side Issues (forms & Validations), (associations), ]
 + [TODO: Permissions ](develop_permissions.md)
 
++ [TODO: Error reporting](develop_errors.md)
+
 + [Testing and continuous integration](develop_testing.md)
 
 + [Contributing to a project](develop_contribute.md)

@@ -61,46 +61,23 @@ module.exports = {
 ##### create, destroy  methods
 Now, in addition to the Blueprint APIs, we need to also close down our `create` and `destroy` methods.
 
-According to our design document, our external interface should only be allowed to `find` a list of pending approvals, and `update` an approval's status.  The external client application is not supposed to be able to `create` or `destroy` an approval entry.  So, let's close those interfaces down:
+According to our design document, our external interface should only be allowed to `find` a list of pending approvals, and `update` an approval's status.  The external client application is not supposed to be able to `create` or `destroy` or do anything else a RESTful route might enable:.  So, let's close those interfaces down:
 ```javascript
-// your api/controllers/PARequestController.js
+// [plugin]/config/policies.js
 module.exports = {
 
-    _config: {
-        model: "parequest", // all lowercase model name
-        actions: false,
-        shortcuts: false,
-        rest: true
-    },
-
-
-    find: function(req, res) {
-
-
-    	if (fixtureData == null){
-    		var data = fs.readFileSync(path.join(__dirname, '..', '..', 'test', 'fixtures', 'PARequest.json'));
-    		fixtureData = JSON.parse(data);
-
-    		fixtureData.splice(fixtureData.length-1, 1);  // <-- this one isn't supposed to be returned.
-
-    	}
-    	res.send(fixtureData);
-
-    },
-
-    create:function(req, res) {
-    	// this is not allowed:
-        res.forbidden();
-    },
-
-    destroy:function(req, res) {
-    	// this is not allowed
-    	res.forbidden();
+    'opstool-process-approval/PARequestController': {
+        create: false,
+        add: false,
+        populate: false,
+        remove: false,
+        destroy: false
     }
 
 };
-```
 
+```
+Now access to those operations on our controller are no longer allowed.
 
 So, wanna test those out without having to use another app to submit the REST api calls?  Yeah, me too.  Change the shortcuts back on:
 ```javascript
