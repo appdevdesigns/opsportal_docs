@@ -10,6 +10,8 @@ Here is how you can start developing an OpsPortal Tool today:
 
 + [working with models](develop_models.md)
 
++ [UI Views and HTML Animation](develop_process_views.md)
+
 + [TODO: Multilingual (labels), (table data) ]
 + [TODO: Client Side Issues (forms & Validations), (associations), ]
 + [TODO: Permissions ](develop_permissions.md)

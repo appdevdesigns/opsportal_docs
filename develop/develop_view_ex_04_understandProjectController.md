@@ -3,7 +3,7 @@
 
 Let's analyze how your default Program Controller works.
 
-To begin with, open up your default Program Controller in `[project]/assets/opstools/[ToolName]/controllers/[ToolName].ejs`.
+To begin with, open up your default Program Controller in `[project]/assets/opstools/[ToolName]/controllers/[ToolName].js`.
 
 It should look like this (without comments) :
 ```javascript
