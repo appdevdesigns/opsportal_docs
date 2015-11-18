@@ -1073,6 +1073,10 @@ if (sails.config.environment == 'development') {
     fixture.callback = {
       message: fixture.callback
     }
+
+    for (var o in fixture.objectData) {
+      fixture[o] = fixture.objectData[o];
+    }
   })
 
 

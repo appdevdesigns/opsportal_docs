@@ -30,13 +30,12 @@ In the middle of our last sprint I received the UI designs back from our designe
 + [step 1](tutorial_sprint2_01_copyDesign.md) : Copy the UI design to the project template
 + [step 2](tutorial_sprint2_02_initialControllers.md) : Initial Controller layout and Events
 + [step 3](tutorial_sprint2_03_pendingTransactions.md) : PendingTransactions list
-+ [step 4]() : Approval Workspace & Instructions
-+ [step 5]() : Approval Form (include passing of data from List to Form)
-+ [step 6]() : ObjectLayout
-+ [step 7]() : RelatedInfo
-+ [step 8]() : submitting the transaction
-+ [step 9]() : updating the list
-+ [step 10]() : real time updates
++ [step 4](tutorial_sprint2_04_approvalWorkspace.md) : Approval Workspace & Instructions
++ [step 5](tutorial_sprint2_05_noComments.md) : No Comments this round
++ [step 6](tutorial_sprint2_06_submit.md) : submitting the transaction
++ [step 7]() : updating the list
++ [step 8]() : real time updates
++ [step 9]() : Form validations
 
 
 

@@ -9,6 +9,7 @@ Currently this plugin has a set of mockup files :
 + `/assets/mockup_setup.js` :  Contains any javascript code the UI designer needs to animate his mockup
 
 At this point in the Sprint, I now send my UI developer the project design document, and tell him to prepare [their own copy](../develop/develop_contribute.md) of the project:
+> NOTE: if your going through the tutorial, you don't need to do any of the following things. This is just what I tell our UI designer how to get started working with our mockups.
 
 + [setup a development environment](../develop/develop_setup.md)
 + git clone [THEIR Fork](../develop/develop_contribute_fork.md) of the project
@@ -28,7 +29,7 @@ At this point in the Sprint, I now send my UI developer the project design docum
    ```
 
 + Now open the `assets/mockup.html` in a browser and verify there are no errors.
-> But not Chrome!  They prevent local file access.  
+> But not using Chrome!  Chrome prevents local file access.  
 
 
 

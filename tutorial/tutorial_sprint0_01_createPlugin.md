@@ -15,6 +15,8 @@ $ appdev opstoolplugin opstool-process-approval
    #    author / description / version : yeah, you can figure those out
    #    git repository:  by default appdevdesigns/[pluginName] <-- you'll wanna change that to yours.
 ```
+>NOTE: by default the git repository is setup to use 'appdevdesigns'.  But you will want to change that git repository to your own.
+
 
 In order to verify things are at least initially working:
 ```sh

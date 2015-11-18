@@ -482,4 +482,4 @@ Now we have our list in basic functioning order.  There are some visual `.css` i
 
 ---
 [< step 2 : Initial Controller layout and Events](tutorial_sprint2_02_initialControllers.md)
-[step 4 : Approval Workspace & Instructions >](.md) 
+[step 4 : Approval Workspace & Instructions >](tutorial_sprint2_04_approvalWorkspace.md) 
