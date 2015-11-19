@@ -1074,9 +1074,15 @@ if (sails.config.environment == 'development') {
       message: fixture.callback
     }
 
+    // all the attributes stored in objectData should actually be
+    // top level attributes:
     for (var o in fixture.objectData) {
       fixture[o] = fixture.objectData[o];
     }
+
+    // .objectData is created by our MessageQueue handler.
+    delete fixture.objectData;
+    
   })
 
 

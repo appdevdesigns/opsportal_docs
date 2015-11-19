@@ -6,7 +6,7 @@ My goal here is to come up with a set of data that will act as a common referenc
 
 If we decide to update the design specifications in the future, then this one file will need to be updated so it continues to represent the latest "correct" version of the specifications.
 
-In our design, we are pulling our information from an `ApprovalRequest` model.  So I'm going to create a sample set of data in : `test/fixtures/approvalrequests.json` 
+In our design, we are pulling our information from an `ApprovalRequest` model.  You need to create a sample set of data in : `test/fixtures/approvalrequests.json` 
 
 ```json
 [
@@ -75,8 +75,9 @@ In my initial set of test data, I included 4 entries:
 + 1 entry with userID:'NotThisUser' should not
 + 1 matching entry returned will have an invalid template sent for the form data (client must handle this properly)
 
+> NOTE: you can see the full set of fixture data [here](tutorial_sprint0_05_fullFixtureData.md).
 
-Also, we are expecting to have some comments, so I'll create another fixture file: `test/fixtures/approvalcomments.json` 
+Also, we are expecting to have some comments, so create another fixture file: `test/fixtures/approvalcomments.json` 
 ```json
 [
   {

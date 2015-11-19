@@ -26,6 +26,7 @@ module.exports = {
         rest: true
     }
 
+    // I removed the find:function(){}  definition that was here.
 };
 ```
 
@@ -156,6 +157,7 @@ If for some reason you wanted to register your policy before any of our default 
 ```javascript
 var scopedStack = ADCore.policy.serviceStack().unshift(limitScope);
 ```
+> NOTE: it is just an array, so you can insert your policy anywhere you want. BUT if you insert it before the existing policies, you can't expect the basic service setup to have happened yet.  
 
 
 After this, we now apply this new set of policies to the Controller actions that need them.  In this case it is the `PARequestController`'s `.find`, `.findOne`, and `.update` actions.  (remember we disabled the `.create` and `.destroy` actions back in [step 5](tutorial_sprint1_05_lockdownAPI.md)):
