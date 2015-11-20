@@ -32,8 +32,8 @@ In the middle of our last sprint I received the UI designs back from our designe
 + [step 3](tutorial_sprint2_03_pendingTransactions.md) : PendingTransactions list
 + [step 4](tutorial_sprint2_04_approvalWorkspace.md) : Approval Workspace & Instructions
 + [step 5](tutorial_sprint2_05_noComments.md) : No Comments this round
-+ [step 6](tutorial_sprint2_06_submit.md) : submitting the transaction
-+ [step 7]() : updating the list
++ [step 6](tutorial_sprint2_06_submit.md) : Submitting the Transaction
++ [step 7](tutorial_sprint2_07_updateList.md) : updating the list
 + [step 8]() : real time updates
 + [step 9]() : Form validations
 
