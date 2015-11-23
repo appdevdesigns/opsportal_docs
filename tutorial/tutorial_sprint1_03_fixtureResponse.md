@@ -200,6 +200,7 @@ module.exports = {
 
 };
 ```
+> NOTE: you may be wondering why I'm going through all the trouble to remove 1 entry from the data.  Bascially that entry is supposed to be an entry the test user doesn't have permission to see.  I want this `find()` method to return valid entries for our testing purposes.  In future steps we will actually implement permissions and this will make more sense.
 
 
 ##### Verify our tests pass
