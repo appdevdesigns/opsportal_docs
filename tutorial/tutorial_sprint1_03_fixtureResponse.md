@@ -259,6 +259,7 @@ you can change the PARequestController test to look like this:
 // test/controllers/PARequestController.js
 var assert = require('chai').assert;
 
+// NOTE: I removed supertest and replaced it with 'ad-utils'
 var AD = require('ad-utils');
 var request = null; 
 

@@ -80,6 +80,12 @@ We now need to add a test for a user with out permission to make sure they are d
 ```javascript
 // test/controllers/PARequestController.js
 
+var assert = require('chai').assert;
+
+var AD = require('ad-utils');
+var request = null; 
+
+// yeah: add supertest back in
 var superTest = require('supertest');
 var requestNoPerm = null;
 
@@ -90,6 +96,7 @@ describe('PARequestController', function() {
  
         request = AD.test.request(function(err){
 
+            // NOTE: replace the INSIDE of the AD.test.request() callback
             requestNoPerm = superTest.agent(sails.hooks.http.app);
 
             requestNoPerm
@@ -101,7 +108,7 @@ describe('PARequestController', function() {
 
         });
 
-    });
+    });  // end before()
 
 ```
 

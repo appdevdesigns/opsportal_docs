@@ -1,5 +1,5 @@
 [< Tutorial](tutorial.md)
-# Tutorial - Sprint 1
+# Tutorial - Sprint 2
 
 
 ### Overview
@@ -35,7 +35,7 @@ In the middle of our last sprint I received the UI designs back from our designe
 + [step 6](tutorial_sprint2_06_submit.md) : Submitting the Transaction
 + [step 7](tutorial_sprint2_07_updateList.md) : Updating the List
 + [step 8](tutorial_sprint2_08_templateErrors.md) : Catch Template Errors
-+ [step 9](tutorial_sprint2_09_realTimeUpdates.md) : real time updates
++ [step 9](tutorial_sprint2_09_realTimeUpdates.md) : Real Time Updates
 + [step 10]() : Form validations
 
 
