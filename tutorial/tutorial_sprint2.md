@@ -16,6 +16,8 @@ $ cd node_modules
 $ git clone https://github.com/appdevdesigns/opstool-process-approval.git
 $ cd opstool-process-approval
 $ git checkout Sprint_1
+$ npm update
+$ node setup/setup.js
 ```
 
 Also, it will be helpful for you to have read through our discussion on [html animation](../develop/develop_process_views.md) and the way our team approaches the UI templating.

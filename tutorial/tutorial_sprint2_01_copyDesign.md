@@ -16,7 +16,37 @@ In our project directory there is an `[plugin]/assets/mockup.html` file that con
 
 So, open the `mockup.html` file and copy all the contents between the provided `<!-- HTML Mockup Here -->` and `<!-- End HTML Mockup -->` tags.
 
-Now paste this content into your default controller's template file: `[plugin]/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs`
+Now paste this content into your default controller's template file: `[plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs`
+
+
+Next, we need to tell our OpsPortal to include the ProcessApproval tool.  Add a new Area/Tool definition to our `opsportal.js` config file:
+```javascript
+// [sails]/config/opsportal.js
+
+    //
+    // New OpsTool: ProcessApproval
+    // 
+    {
+        // Define the Area for ProcessApproval
+        icon:'fa-cogs',
+        key:'ProcessApproval',
+        label:'ProcessApproval',
+        tools:[{
+
+            // ProcessApproval Tool
+            controller:'ProcessApproval',
+            label:'ProcessApproval',
+            isDefault: true,
+            permissions:[
+                'adcore.admin'
+                , 'adcore.developer'
+            ]
+          }
+        ]
+    }
+
+```
+>NOTE: depending on where you add this, be sure to add the proper `,` to insert it into the json array.
 
 Start sails:
 ```sh

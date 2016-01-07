@@ -22,6 +22,8 @@ $ npm install -g appdevdesigns/appdev-cli
 ```
 
 Now we simply need to run the appdev install tool:
+>Note: if you are using Mysql you will be asked for a Database to use.  Make sure you have already created that DB before running this install command.
+
 ```sh
 $ cd your/development/directory
 $ appdev install sails --develop

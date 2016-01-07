@@ -16,6 +16,8 @@ $ cd node_modules
 $ git clone https://github.com/appdevdesigns/opstool-process-approval.git
 $ cd opstool-process-approval
 $ git checkout Sprint_0
+$ npm update
+$ node setup/setup.js
 ```
 
 ### Status

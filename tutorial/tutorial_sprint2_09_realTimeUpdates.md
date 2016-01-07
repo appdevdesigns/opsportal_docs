@@ -159,8 +159,8 @@ Pass in the `data.selectedRequest` value when creating the template:
         },
 ```
 > NOTE: we are passing in `this.data` to the template instead of `this.data.selectedRequest`.  
-> This is because creating the `{ data: this.data.selectedRecord }` would save the current value of `selectedRecord` and send that to the template.  Changing that value later would not be sent to the template, only the 1st value.
-> But if we save an object like `{ data: this.data }` the whole object is sent in to the template.  And later on, we can save a property of the object and the template will have access to that.
+> This is because creating the `{ data: this.data.selectedRecord }` would save a **copy of** the current value of `selectedRecord` and send that to the template.  Changing `this.data.selectedRecord` later would not effect the copy sent to the template, so the template would not change.
+> But if we save an object like `{ data: this.data }` a **reference to** the object is sent in to the template.  And later on, we can change the `.selectedRecord` property of the object and the template will respond to that change.
 
 Now update the template to assign the `active` class if we have one selected:
 ```html
