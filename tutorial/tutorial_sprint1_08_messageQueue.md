@@ -17,8 +17,18 @@ This feature isn't directly tied to one of our Models or Controllers, so let's c
 // [plugin]/test/unit/queue.js
 var assert = require('chai').assert;
 
+var AD = require('ad-utils');
+var request = null; 
 
 describe('Message Queue', function() {
+
+    before(function(done) {
+ 
+        request = AD.test.request(function(err){
+            done(err);
+        });
+
+    });
 
     it('should add a new entry after a new message : ', function(done) {
 
@@ -32,10 +42,6 @@ describe('Message Queue', function() {
 To begin with, let's read in the current number of PARequests in our db:
 ```javascript
 // [plugin]/test/unit/queue.js
-var assert = require('chai').assert;
-
-
-describe('Message Queue', function() {
 
     it('should add a new entry after a new message : ', function(done) {
 
@@ -48,8 +54,6 @@ describe('Message Queue', function() {
 
         })
     });
-
-});
 
 ```
 >NOTE: normally in development, I use the promises returned from the Sails Models ( PARequest.find().catch().then()).  But in writing tests, I use the `.exec()` callback, so the promise's don't catch the assert errors.  This helps keep my unit tests more similar by calling `done()` or `done(err)`.
@@ -74,7 +78,18 @@ var testTransaction = {
     }
 }
 
+var AD = require('ad-utils');
+var request = null; 
+
 describe('Message Queue', function() {
+
+    before(function(done) {
+ 
+        request = AD.test.request(function(err){
+            done(err);
+        });
+
+    });
 
     it('should add a new entry after a new message : ', function(done) {
 
@@ -97,23 +112,6 @@ describe('Message Queue', function() {
 Then follow up and make sure our new entry is in the DB :
 ```javascript
 // [plugin]/test/unit/queue.js
-var assert = require('chai').assert;
-
-var testTransaction = {
-    menu:{},
-    form:{},
-    related:{},
-    callback:{
-        message:'test.tool.callback',
-        reference:{ uuid: 'test.entry.1' }
-    },
-    permission:{
-        actionKey:'test.action',
-        userID: 'user.1'
-    }
-}
-
-describe('Message Queue', function() {
 
     it('should add a new entry after a new message : ', function(done) {
 
@@ -151,7 +149,6 @@ describe('Message Queue', function() {
         })
     });
 
-});
 
 ```
 
@@ -230,7 +227,7 @@ module.exports = function (cb) {
       paData.status = 'pending';
 
       PARequest.create(paData)
-      .exec();
+      .exec(function(){});
 
   });
 
