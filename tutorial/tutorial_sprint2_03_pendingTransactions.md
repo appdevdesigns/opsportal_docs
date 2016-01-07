@@ -85,10 +85,10 @@ Now get the Model object and `.findAll()` the transactions we are allowed to see
             this.PARequest = AD.Model.get('opstools.ProcessApproval.PARequest');
             this.PARequest.findAll()
             .fail(function(err){
-console.error("!!! Dang.  something went wrong:", err);
+                console.error("!!! Dang.  something went wrong:", err);
             })
             .then(function(list){
-console.log("... here is our list of pending transactions:", list);
+                console.log("... here is our list of pending transactions:", list);
             });
 
 
