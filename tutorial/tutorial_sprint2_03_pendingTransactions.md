@@ -64,35 +64,35 @@ function(){
 
 Now get the Model object and `.findAll()` the transactions we are allowed to see:
 > NOTE: in sprint 1 we already did all the modifications to the `find` api that limits the response back.
+
 ```javascript
 // [plugin]/assets/opstools/ProcessApproval/controllers/PendingTransactions.js
 
-init: function (element, options) {
-    var self = this;
-    options = AD.defaults({
-            // templateDOM: '//opstools/ProcessApproval/views/PendingTransactions/PendingTransactions.ejs'
-    }, options);
-    this.options = options;
+  init: function (element, options) {
+      var self = this;
+      options = AD.defaults({
+              // templateDOM: '//opstools/ProcessApproval/views/PendingTransactions/PendingTransactions.ejs'
+      }, options);
+      this.options = options;
 
-    // Call parent init
-    this._super(element, options);
-
-
-    this.initDOM();
+      // Call parent init
+      this._super(element, options);
 
 
-    // now load our data from the server:
-    this.PARequest = AD.Model.get('opstools.ProcessApproval.PARequest');
-    this.PARequest.findAll()
-    .fail(function(err){
-        console.error("!!! Dang.  something went wrong:", err);
-    })
-    .then(function(list){
-        console.log("... here is our list of pending transactions:", list);
-    });
+      this.initDOM();
 
 
-},
+      // now load our data from the server:
+      this.PARequest = AD.Model.get('opstools.ProcessApproval.PARequest');
+      this.PARequest.findAll()
+      .fail(function(err){
+          console.error("!!! Dang.  something went wrong:", err);
+      })
+      .then(function(list){
+          console.log("... here is our list of pending transactions:", list);
+      });
+
+  },
 ```
 
 Now if you reload the OpsPortal and watch the console you should see the list of transactions returned from the server.
