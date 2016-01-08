@@ -279,7 +279,7 @@ Our `ProcessApproval.ejs`:
 </div>
 
 <!-- Main stage area -->
-<div class='col-xs-10 op-container op-stage  pa-approvalworkspace'>
+<div class='col-xs-10 op-container op-stage pa-approvalworkspace'>
 
 	<!-- work area details removed for brevity -->
 

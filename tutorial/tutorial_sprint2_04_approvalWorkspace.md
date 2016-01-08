@@ -14,12 +14,12 @@ However, as I consider what this controller is going to actually be responsible 
 ### Attach to the Instructions DIV
 In our design, there should be a default `Instructions` panel that shows when the tool first loads and nothing is selected.
 
-Our first task is to find that DOM element and make sure that panel is shown when the tool first loads.  Looking at the HTML contained by our `ApprovalWorkspace` controller in [plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs` we see it is laid out like this:
+Our first task is to find that DOM element and make sure that panel is shown when the tool first loads.  Looking at the HTML contained by our `ApprovalWorkspace` controller in `[plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs` we see it is laid out like this:
 ```html
 <!-- [plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs  -->
 
 <!-- Main stage area -->
-<div class='col-xs-10 op-container op-stage'>
+<div class='col-xs-10 op-container op-stage pa-approvalworkspace'>
 
   <!--Form Activity Area-->
   <div id="apprv-activity" class="mockup-display new-activity opsportal-content-area">
@@ -44,7 +44,7 @@ So, I'm going to add a panel to the HTML, then later I'll have the UI designer g
 <!-- [plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs  -->
 
 <!-- Main stage area -->
-<div class='col-xs-10 op-container op-stage'>
+<div class='col-xs-10 op-container op-stage pa-approvalworkspace'>
 
   <!-- Instructions Panel -->
   <div class="mockup-display new-activity opsportal-content-area pa-instructionsPanel">
@@ -114,7 +114,7 @@ Here are my changes to the HTML:
 <!-- [plugin]/assets/opstools/ProcessApproval/views/ProcessApproval/ProcessApproval.ejs  -->
 
 <!-- Main stage area -->
-<div class='col-xs-10 op-container op-stage'>
+<div class='col-xs-10 op-container op-stage pa-approvalworkspace'>
 
   <!-- Instructions Panel -->
   <div class="mockup-display new-activity opsportal-content-area pa-instructionsPanel">
@@ -275,7 +275,7 @@ Now I'm going to treat this whole section as a template and pass it our transact
             can.view.ejs('PA_ApprovalForm', template);
 
             // clear the form
-            this.dom.approvalForm.html();
+            this.dom.approvalForm.html('');
 
 
             this.showDOM('instructions');
