@@ -63,7 +63,7 @@ info: Starting app...
 info: 
 info: 
 info:    Sails              <|
-info:    v0.10.5             |\
+info:    v0.12.3             |\
 info:                       /|.\
 info:                      / || \
 info:                    ,'  |'  \
@@ -116,45 +116,52 @@ module.exports.opsportal = {
           // Define the Administration Area
           icon:'fa-cogs',
           key:'PortalAdmin',
-          label:'Administration',
+          label:'opp.areaAdministration',
+          context:'opsportal',
           tools:[{
                   // Roles and Permissions
                   controller:'RBAC',
-                  label:'Permissions',
+                  label:'opp.toolPermissions',
+                  context:'opsportal',
                   isDefault: true,
                   permissions:[
-                      'adcore.admin'
-                      , 'adcore.developer'
+                      'adcore.admin', 
+                      'adcore.developer'
                   ]
               }
 
               // User management Interface here...
           ]
       },
+
+
       {
           // User Profile Tool
           icon:'fa-user',
           key:'profile',
-          label:'Profile',
+          label:'opp.areaProfile',
+          context:'opsportal',
           isDefault:false,
           tools:[{
                   // Hris User Profile Tool
                   controller:'HrisUserProfile',
-                  label:'Profile',
+                  label:'opp.toolProfile',
+                  context:'opsportal',
                   isDefault: true,
                   permissions:[
-                      'hris.profile'
-                      , 'adcore.developer'
+                      'hris.profile', 
+                      'adcore.developer'
                   ]
               },
               {
                   // Hris Admin Objects
                   controller:'HrisAdminObjects',
-                  label:'Configure Objects',
+                  label:'opp.toolObjectBuilder',
+                  context:'opsportal',
                   isDefault: false,
                   permissions:[
-                      'hrisadmin.objects'
-                      , 'adcore.developer'
+                      'hrisadmin.objects', 
+                      'adcore.developer'
                   ]
               }
 
@@ -216,7 +223,7 @@ info: Starting app...
 info: 
 info: 
 info:    Sails              <|
-info:    v0.10.5             |\
+info:    v0.12.3             |\
 info:                       /|.\
 info:                      / || \
 info:                    ,'  |'  \

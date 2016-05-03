@@ -8,7 +8,7 @@ In order to develop for the OpsPortal, you need to install the following package
   - [Git](https://git-scm.com/downloads)
   - [Mysql](https://www.mamp.info/en/downloads/) (optional: only if you want to use mysql)
   - [NodeJS](http://nodejs.org/download/)
-  - [SailsJS](http://sailsjs.org/#/)
+  - [SailsJS](http://sailsjs.org/#/) (currently supporting v0.12.3)
   - [appdev-cli](https://github.com/appdevdesigns/appdev-cli) (recommended)
 >Note: Windows users will also need [python v2.x](https://www.python.org/downloads/). 
 
@@ -17,7 +17,7 @@ First, make sure you download and install [Git](https://git-scm.com/downloads) a
 
 The rest of the setup can be done from the command line:
 ```sh
-$ npm install -g sails
+$ npm install -g sails@0.12.3
 $ npm install -g appdevdesigns/appdev-cli
 ```
 
@@ -54,7 +54,7 @@ info: Starting app...
 info: 
 info: 
 info:    Sails              <|
-info:    v0.10.5             |\
+info:    v0.12.3             |\
 info:                       /|.\
 info:                      / || \
 info:                    ,'  |'  \
