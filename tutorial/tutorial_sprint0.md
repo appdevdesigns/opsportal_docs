@@ -1,4 +1,4 @@
-[< Tutorial](tutorial.md)
+[< Tutorial: Custom Plugin](tutorial.md)
 # Tutorial - Sprint 0
 
 

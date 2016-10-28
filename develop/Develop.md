@@ -1,3 +1,4 @@
+[< ReadMe](../README.md)
 # Developers
 
 Here is how you can start developing an OpsPortal Tool today:
@@ -25,5 +26,5 @@ Here is how you can start developing an OpsPortal Tool today:
 
 Also, be sure to review our [style guide](../style_guide/StyleGuide.md)
 
-We also have a [tutorial](../tutorial/tutorial.md) to help you get started.
+We also have some [tutorials](../tutorials/tutorial.md) to help you get started.
 
