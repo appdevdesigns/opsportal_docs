@@ -58,7 +58,7 @@ steal(
         fieldLabel:'title'
     },{
         // model: function() {
-        //     return AD.Model.get('optools.Test.Test'); //AD.models.optools.Test.Test;
+        //     return AD.Model.get('opstools.EmailNotifications.ENRecipient'); 
         // },
         // getID: function() {
         //     return this.attr(this.model().fieldId) || 'unknown id field';

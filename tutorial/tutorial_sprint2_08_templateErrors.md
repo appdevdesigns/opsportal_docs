@@ -123,6 +123,39 @@ Now Reload the OpsPortal and click on that troublesome entry.  That is not prett
 Also, when you look at the console messages again, you'll see our new `Error displaying template: ...` message.  If the communications between your UI and server are operating, then a message should have been recorded in the developer's logs on the server.
 
 
+Oh, and one more thing ...
+
+Since this can display images that have been uploaded from multiple sources, we need to handle special cases.  Apparently some smart phones will take an image in portrait mode, but actually store it in horizontal format and add extra EXIF data to indicate the image should be rotated.  
+
+HTML <img> tags don't actually look at the EXIF data and will simply display the image as it is physically stored ... horizontally.
+
+We have an OpPortal widget to handle rotating images like this, so let's add that to the template:
+```javascript
+// [plugin]/assets/opstools/ProcessApproval/controllers/ApprovalWorkspace.js
+
+            try {
+
+                $el.html( can.view(templateInfo.view, data) );
+
+                // attach any embedded op images
+                $el.find('[ap-op-image]').each(function(i, el){
+                    new AD.op.Image(el);
+                });
+
+            } catch(e) {
+
+                // respond to the error here
+            }
+```
+
+For a template to display an image that needs to be rotated, it needs a <div> defined with an attribute *ap-op-image* like so:
+```html
+<div class="img-responsive" ap-op-image="true" opimage-url="<%= data.image %>">
+</div>
+```
+the *opimage-url* attribute will auto load the image and have it rotated.
+
+> NOTE: we use 'ap' instead of 'ad' because many Advertisement blockers will prevent this element.
 
 ---
 [< step 7 : Updating the List](tutorial_sprint2_07_updateList.md)

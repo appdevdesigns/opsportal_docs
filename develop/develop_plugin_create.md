@@ -40,6 +40,7 @@ You should see something like:
 
 Which is good, since we haven't actually written any unit tests yet.
 
+>Note: 'npm test' attempts to run a makefile.  Windows users should make sure they are able to run 'make' commands.  If not, you'll need to add that ability before you can run any of the tests.
 
 ##Configure the OpsPortal
 Just physically being in the directory doesn't tell the OpsPortal to include you.  We need to add it to the `config/opsportal.js` file.
