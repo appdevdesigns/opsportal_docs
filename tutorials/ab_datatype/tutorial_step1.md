@@ -4,20 +4,33 @@ Let's install the App Builder tool into your current Ops Portal Development Envi
 
 ### Prerequsite
 I'm expecting that you have already walked through our [Developer Setup](../../develop/develop_setup.md) process and have an existing sails directory and an OpsPortal installed.  If not, then go do that [now](../../develop/develop_setup.md).
+>Note: just do the initial setup, don't continue on to creating a new plugin.
 
 
 ### Installation
 
 After running the Developer Setup, you should have a `your/development/directory/[sailsRoot]` directory created with your Ops Portal setup.
 
-Now install the App Builder tool in your development environment:
+Now install the App Builder tool in your development environment.  If you just wanted to use the App Builder, you could install it like this:
 ```sh
-$ cd your/development/directory[sailsRoot]
+$ cd your/development/directory/[sailsRoot]
 $ npm install --save appdevdesigns/app_builder
+```
+
+However, we want to edit the repository, so we'll check it out from git:
+```sh
+$ cd your/development/directory/[sailsRoot]/node_modules
+$ git clone https://github.com/appdevdesigns/app_builder.git
+$ cd app_builder
+$ git checkout develop
+$ npm update
+$ node setup/setup.js
+$ cd ../..
 ```
 
 Once that finishes, edit your local configuration information and update the DB connection:
 ```sh
+# from your [sailsRoot] directory
 $ vi config/local.js
 ```
 
@@ -61,6 +74,28 @@ $ sails lift
 And refresh your Ops Portal page.  
 
 
+
+### Permissions
+Since the App Builder tool was just installed, we need to give your current user permission to see the tool.
+
+Open the `[menu]` -> `[Administration]` -> `[Permission]`  Tool.
+(it's probably the default tool that is showing now)
+
+The Permission tool allows you to edit users, assign roles, and add permissions to the roles.
+
+First click the `admin` user in the default user list.  And notice that it is assigned the `System Admin` role.
+
+Now lets edit the `System Admin` role to have permission to access the App Builder:
+
++ click `[Roles]`
++ click the `[System Admin]` entry in the list
++ page to the last Action List entries
++ click the checkbox in front of the `appbuilder.designer.view` permission
+![AddPermission](images/step1_addPermission.png "Add Permission")
+
+
+
+
 ### Navigation Configuration
 
 Now we will need to Add the App Builder to the Ops Portal navigation:
@@ -83,25 +118,6 @@ This creates a new `Menu Area` in the Ops Portal Navigation.  Now we will add th
 ![AddTool](images/step1_addTool.png "Add Tool")
 
 Now Select the [save] link and you will be returned to the OpsPortal.
-
-
-### Permissions
-Since the App Builder tool was just installed, we need to give your current user permission to see the tool.
-
-Open the `[menu]` -> `[Administration]` -> `[Permission]`  Tool.
-(it's probably the default tool that is showing now)
-
-The Permission tool allows you to edit users, assign roles, and add permissions to the roles.
-
-First click the `admin` user in the default user list.  And notice that it is assigned the `System Admin` role.
-
-Now lets edit the `System Admin` role to have permission to access the App Builder:
-
-+ click `[Roles]`
-+ click the `[System Admin]` entry in the list
-+ page to the last Action List entries
-+ click the checkbox in front of the `appbuilder.designer.view` permission
-![AddPermission](images/step1_addPermission.png "Add Permission")
 
 
 At this point, your Ops Portal navigation should be updated to now show you the new `App Builder` Menu Area you created.
