@@ -11,6 +11,7 @@ In this tutorial, we will add a customized data type for storing uploaded images
 ### Let's Go
 
 + [step 1](tutorial_step1.md) : App Builder Setup and installation
-+ [step 2](tutorial_step2.md) : Client Side Data Type
-+ [step 3](tutorial_step3.md) : Server Side Data Type
-+ [step 4](tutorial_step4.md) : Client Side UI component
++ [step 2](tutorial_step2.md) : Define a Test Application
++ [step 3](tutorial_step3.md) : Client Side Data Type
++ [step 4](tutorial_step4.md) : Server Side Data Type
++ [step 5](tutorial_step5.md) : Client Side UI component

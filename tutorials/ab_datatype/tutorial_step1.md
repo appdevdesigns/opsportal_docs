@@ -79,7 +79,7 @@ And refresh your Ops Portal page.
 Since the App Builder tool was just installed, we need to give your current user permission to see the tool.
 
 Open the `[menu]` -> `[Administration]` -> `[Permission]`  Tool.
-(it's probably the default tool that is showing now)
+_(it's probably the default tool that is showing now)_
 
 The Permission tool allows you to edit users, assign roles, and add permissions to the roles.
 
@@ -127,4 +127,4 @@ click `[menu]` -> `[App Builder]`  and now the App Builder interface should show
 
 ---
 [< Tutorial: App Builder Data Type](tutorial.md)
-[Step 2 : Client Side Data Type >](tutorial_step2.md) 
+[Step 2 : Define a Test Application >](tutorial_step2.md) 

@@ -10,10 +10,10 @@ In order to develop for the OpsPortal, you need to install the following package
   - [NodeJS](https://nodejs.org) (v6.x)
   - [SailsJS](http://sailsjs.org/#/) (currently supporting v0.12.3)
   - [appdev-cli](https://github.com/appdevdesigns/appdev-cli) (recommended)
->Note: Windows users will also need [python v2.x](https://www.python.org/downloads/). 
 
 
 First, make sure you download and install [Git](https://git-scm.com/downloads) and [Mysql](https://www.mamp.info/en/downloads/).  Then download the appropriate [NodeJS](http://nodejs.org/download/) package and install it.  Once that is done, you will also have a command line tool called `npm`
+>Note: I'd recommend taking a moment to read through [this article](https://www.sitepoint.com/beginners-guide-node-package-manager/)  and see how they setup npm to not require using `sudo`.  (it is the section called `Changing the Location of Global Packages`)  While not necessary, it could save you some additional headaches.
 
 The rest of the setup can be done from the command line:
 ```sh
