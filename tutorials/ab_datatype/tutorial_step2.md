@@ -78,7 +78,7 @@ Now we want to test viewing our Data Field in a generated Interface.
 - click `[Add]`
 ![addPage](images/step2_addPage.png "Add a Page")
 
-Now you should see `Manage Cast` in your page list, and an empty Page work area.
+Now you should see `Manage Cast` in your page list, and an empty Page Layout area.
 - drag a `Grid` component from the far right column into the Page Layout
 - then click the grid's `[Edit]` button.
 ![addGrid](images/step2_addGrid.png "Add a Grid")

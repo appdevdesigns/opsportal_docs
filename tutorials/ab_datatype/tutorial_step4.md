@@ -86,7 +86,7 @@ In a different browser (like switch from Chrome to Firefox, don't just open a ne
 ### Update the UI
 Before we move on, let's update our Interface and have the default grid component show the new column.
 
-- Click the `Interface` tab
+- click the `Interface` tab
 - click `Manage Cast` in the list
 - click the `[edit]` button on the Grid
 ![editGrid](images/step4_editGrid.png "Edit Grid")
@@ -95,6 +95,7 @@ The `Image` column was added after this grid component was created.  So now we n
 - click the `Image` checkbox
 - click `[Save]`
 - click `[Synchronize]`
+![addImage](images/step4_addTheImage.png "Add The Image")
 
 When the synchronization is complete.  Reload the Ops Portal.  Then Navigate to the actual app that is generated.  The Grid should now show both column with your data in them.
 
@@ -109,4 +110,4 @@ $ git commit -m 'initial image Data Field'
 
 ---
 [< Step 3 : Client Side Data Type](tutorial_step3.md)
-[Step 5 : Server Side Data Type >](tutorial_step5.md) 
+[Step 5 : How Images will be uploaded >](tutorial_step5.md) 
