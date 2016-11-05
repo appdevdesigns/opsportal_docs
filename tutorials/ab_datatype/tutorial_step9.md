@@ -138,7 +138,47 @@ Now, did you notice back on the second step above, that the editing of the exist
 
 
 ### Populate From Settings
-Lets tell our Data Field to default it's stored values
+Lets tell our Data Field to default it's stored values on an edit operation.  
+
+**But Wait:** I'm getting nervous with all the repeated strings I'm using for the Webix ids for our form components.  So first let's create those strings in our `componentIds` and reuse those in our definitions:
+```javascript
+var componentIds = {
+	editView: 'ab-new-image',
+
+	useWidth	: 'useWidth',
+	imageWidth	: 'imageWidth', 
+	useHeight	: 'useHeight',
+	imageHeight	: 'imageHeight'
+};
+```
+`<taking a deep breath>`_OK, I'm feeling better about this now._`</taking a deep breath>` Let's continue:
+
+```javascript
+imageDataField.populateSettings = function (application, data) {
+	if (!data.setting) return;
+
+	$$(componentIds.useWidth).setValue(data.setting.useWidth);
+	$$(componentIds.imageWidth).setValue(data.setting.imageWidth);
+	$$(componentIds.useHeight).setValue(data.setting.useHeight);
+	$$(componentIds.imageHeight).setValue(data.setting.imageHeight);
+
+};
+```
+
+Now, try this:
+
+- Reload Ops Portal and view your `Cast` Object
+- Edit our column information:
+
+You should now see the previous settings implemented in the popup editor.
+![populated](images/step9_setSomeValues.png "Values Populated")
+
+
+
+### Change the view of the Image
+
+
+
 ---
 [< Step 8 : Something Went Wrong](tutorial_step8.md)
 [Step 10 : Fix Width And Height >](tutorial_step10.md) 
