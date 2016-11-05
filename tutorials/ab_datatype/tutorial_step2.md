@@ -32,7 +32,7 @@ Let's create an Object and add an initial Data Field to see what our new Data Fi
 - and give it a name:  `Cast`
 
 When the object is created, 
-- click on the `Client` entry in the list, and your workspace will now show the current definition and content of that Object.
+- click on the `Cast` entry in the list, and your workspace will now show the current definition and content of that Object.
 - click the `[Add New Column]` button on the far right
 - hover your mouse over the `Choose Field Type` button 
 ![AddColumnButton](images/step2_addNewColumn.png "Add New Column")
