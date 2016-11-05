@@ -3,7 +3,6 @@
 
 In order to develop for the OpsPortal, you need to install the following packages:
 
->Note: For an easier setup on Windows try using Docker.  You can try installing our tools using Docker by going [here](develop_setup_docker.md).
 
   - [Git](https://git-scm.com/downloads)
   - [Mysql](https://www.mamp.info/en/downloads/) (optional: only if you want to use mysql)
