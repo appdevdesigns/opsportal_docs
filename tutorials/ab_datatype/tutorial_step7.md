@@ -208,7 +208,7 @@ So it worked, but I couldn't see any changes to the interface to indicate anythi
 - create a unique `keyField` for this instance of the data field and add it to the `$container`
 ```javascript
 
-		var keyField = [ application.name, object.name, fieldData.name, rowId].join('-');
+		var keyField = [ application.name, object.name, fieldData.name, rowId].join('-'); // <-- unique Field
 
 
 		// find the container from our this.getSettings().setting.template 
@@ -216,7 +216,7 @@ So it worked, but I couldn't see any changes to the interface to indicate anythi
 
 		// clear contents
 		$container.html('');
-		$container.attr('id', keyField);			// <--- add the keyField as the #id
+		$container.attr('id', keyField);			                         // <--- add the keyField as the #id
 
 		var imgDiv = null; 
 
@@ -396,14 +396,14 @@ So it worked, but I couldn't see any changes to the interface to indicate anythi
 		    	// when upload is complete:
 		    	onFileUpload:function(item, response){
 					
-					webixContainer.hideProgress();
+					webixContainer.hideProgress();				// <--- Stop spinning on success
 					
 				},
 
 				// if an error was returned
 				onFileUploadError:function(item, response){
 					
-					webixContainer.hideProgress();
+					webixContainer.hideProgress();				// <--- Stop spinning on failure
 				}
 		    }
 		});

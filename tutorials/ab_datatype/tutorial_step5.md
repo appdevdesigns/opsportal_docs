@@ -12,10 +12,13 @@ The Ops Portal includes a service for uploading images to the server.
 - **headers** : 
   - `X-CSRF-Token` : `[current csrf token]`
 - **parameters** : 
-  - `image` : the image you are uploading
   - `appKey` : a unique key referencing the application responsible for this image
   - `permission` : an `Action Key` value required for a user to access this image.
   - `isWebix` : `(optional)` if `true`, then a successful response will have `status:"server"`
+  - `image` : the image you are uploading
+
+>NOTE: this order is important!  The `image` being uploaded must be the **last** parameter.
+
 - **response** :
   - on a successful upload you should get:
   ```json
